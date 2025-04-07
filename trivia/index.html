@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkAnswers() {
+                var answer1 = document.querySelector('input[name="q1"]:checked');
+                var answer2 = document.querySelector('input[name="q2"]').value.trim().toLowerCase();
+
+                if (answer1 && answer1.value === 'correct') {
+                    alert("Correct!");
+                } else {
+                    alert("Incorrect!");
+                }
+                if (answer2 === 'sigmund freud') {
+                    alert("Correct!");
+                } else {
+                    alert("Incorrect");
+                }
+             }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <form>
+                    <p>Where is the capital of Turkey ?</p>
+                    <input type="radio" name="q1" value="incorrect"> İstanbul<br>
+                    <input type="radio" name="q1" value="correct"> Ankara<br>
+                    <input type="radio" name="q1" value="incorrect"> İzmir<br>
+                    <input type="radio" name="q1" value="incorrect"> Adana<br>
+                    <br>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <form>
+                    <p>Who is considered the founder of psychoanalysis?</p>
+                    <input type="text" name="q2"><br>
+                    <br>
+                </form>
+            </div>
+            <button onclick="checkAnswers()">Submit</button>
+        </div>
+    </body>
+</html>
