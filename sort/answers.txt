@@ -1,0 +1,51 @@
+sort1 uses: Bubble Sort
+sorted5000.txt: 0.014s
+sorted10000.txt: 0.029s
+sorted50000.txt: 0.644s
+random5000.txt: 0.050s
+random10000.txt: 0.186s
+random50000.txt: 8.781s
+reversed5000.txt: 0.056s
+reversed10000.txt: 0.208s
+reversed50000.txt: 5.756s
+
+How do you know?:
+reversed50000.txt: 5.756s
+sorted50000.txt: 0.644s
+The runtimes are faster for sorted data but slower for reversed and random data. As the number of elements increases, the runtime increases dramatically.
+
+sort2 uses: Merge Sort
+sorted5000.txt: 0.013s
+sorted10000.txt: 0.022s
+sorted50000.txt: 1.089s
+random5000.txt: 0.015s
+random10000.txt: 0.028s
+random50000.txt: 1.424s
+reversed5000.txt: 0.012s
+reversed10000.txt: 0.033s
+reversed50000.txt: 0.459s
+
+How do you know?:
+reversed50000.txt: 0.459s
+It was exponentially faster.
+The runtimes are nearly constant for 5000-element datasets.
+
+sort3 uses: Selection Sort
+sorted5000.txt: 0.035s
+sorted10000.txt: 0.0126s
+sorted50000.txt: 3.574s
+random5000.txt: 0.036s
+random10000.txt: 0.124s
+random50000.txt: 3.704s
+reversed5000.txt: 0.036s
+reversed10000.txt: 0.130s
+reversed50000.txt: 4.021s
+
+How do you know?:
+reversed50000.txt: 4.021s
+sorted50000.txt: 3.574s
+The runtimes are faster for sorted data but much slower for reversed and random data.
+
+Analysis:
+-Which algorithm is faster? Selection(Merge Sort) is generally faster
+-How does the type of dataset affect performance? Bubble Sort (1) is very slow on reversed data because it requires more swaps.

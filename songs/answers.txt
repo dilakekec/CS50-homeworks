@@ -1,0 +1,3 @@
+In this task, I analyzed a music database using SQL. I improved my understanding of SQL commands such as ORDER BY, AVG and LIMIT.
+At first, I encountered a "missing statement" error, but I realized that the files were empty and fixed the issue by adding the necessary SQL queries
+Through this process, I also learned how to debug errors and edit SQL files GitHub.
